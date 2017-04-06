@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <!--战斗部列表-->
+  <warheads>
+    <warhead model="2-mm.fbx" name="ZDB1">
+      <!--type="double" min="0" max="" step="1" decimal="6"-->
+      <property editable="true" edit_hints="double,0,,1,6">
+        <property name="bullet_shape" mean="弹头形状" value="卵形" editable="false"></property>
+        <property name="mass" mean="质量(kg)" value="150"></property>
+        <property name="wd" mean="圆柱段直径(m)" value="0.39"></property>
+        <property name="iv" mean="初速(m/s)" value="300"></property>
+        <property name="ca" mean="弹头着角(°)" value="0"></property>
+        <property name="oria" mean="卵头弹修正系数A" value="2400"></property>
+        <property name="fuze" mean="引信参数">
+          <property name="instantaneity" mean="引信瞬发度(ms)" value="0.0"></property>
+          <property name="delay_expectation" mean="引信延迟时间期望(ms)" value="7.0"></property>
+          <property name="delay_variance" mean="引信延迟时间方差(ms)" value="0.0"></property>
+        </property>
+      </property>
+    </warhead>
+  </warheads>
+  <!--靶场列表-->
+  <target_ranges>
+    <!--长度、宽度、间隔单位均为m、角度单位为°、厚度单位为mm-->
+    <range model="baban1.FBX" name="夹角等间距" included_angle="70" length="5.2" width="5.2" space="2.8" material="船用921A钢板" material_density="">
+      <plate mt="10"></plate>
+      <plate mt="16"></plate>
+      <plate mt="8"></plate>
+      <plate mt="10"></plate>
+      <plate mt="16"></plate>
+      <plate mt="8"></plate>
+    </range>
+    <range model="baban1.FBX" name="垂直变间距" included_angle="90" length="5.2" width="5.2" material="船用921A钢板" material_density="">
+      <plate mt="10"></plate>
+      <plate mt="16" space="3"></plate>
+      <plate mt="8" space="2.5"></plate>
+      <plate mt="10" space="2"></plate>
+      <plate mt="16" space="1.5"></plate>
+      <plate mt="8" space="1"></plate>
+    </range>
+  </target_ranges>
+</config>
